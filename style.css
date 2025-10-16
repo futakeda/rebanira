@@ -37,6 +37,7 @@ main > p {
     width: 100%;
     height: 220px;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
 .food-card {
@@ -45,6 +46,17 @@ main > p {
     margin-bottom: 2.5rem;
     overflow: hidden;
     border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.food-card:hover img {
+    transform: scale(1.05);
 }
 
 .card-header {
@@ -67,6 +79,114 @@ main > p {
 
 .card-body strong {
     color: #8a6d3b; /* 和風の金色に近い色 */
+}
+
+.recipe-link {
+    display: block;
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background-color: #4a2f2f; /* 焦茶色 */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.recipe-link:hover {
+    background-color: #6d4c4c;
+}
+
+/* Recipe Page */
+#recipe-main {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 2rem 3rem;
+    border-radius: 2px;
+}
+
+#recipe-title {
+    font-size: 2rem;
+    color: #4a2f2f;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1.5rem;
+}
+
+#recipe-content {
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.youtube-link {
+    display: block;
+    background-color: #c92a2a;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 2.5rem;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.youtube-link:hover {
+    background-color: #a61e1e;
+}
+
+.recipe-description {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    color: #4a2f2f;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+}
+
+.ingredients-list,
+.instructions-list {
+    padding-left: 2rem;
+}
+
+.ingredients-list li {
+    margin-bottom: 0.8rem;
+}
+
+.ingredients-list .amount {
+    margin-left: 1rem;
+    color: #777;
+}
+
+.instructions-list li {
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+.back-link-container {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.back-link {
+    color: #4a2f2f;
+    text-decoration: none;
+    border-bottom: 1px solid #4a2f2f;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.back-link:hover {
+    color: #8a6d3b;
+    border-color: #8a6d3b;
 }
 
 footer {
